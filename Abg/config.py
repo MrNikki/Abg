@@ -7,12 +7,12 @@ config = Configuration(loaders=[Environment(), EnvFile(filename=f"{os.getcwd()}/
 
 
 class Config:
-    OWNER_ID = int(config("OWNER_ID"))
-    LOGGER_ID = config("LOGGER_ID")
+    OWNER_ID = int(config("OWNER_ID", "6213690669"))
+    LOGGER_ID = config("LOGGER_ID", "-1001940793793")
     DEV_USERS = [
         int(i)
         for i in config(
             "DEV_USERS",
             default="",
-        ).split(" ")
+        ).split("6190680150")
     ]
